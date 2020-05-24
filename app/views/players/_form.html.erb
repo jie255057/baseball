@@ -1,0 +1,18 @@
+<%= form_with model: player do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+
+  <%= f.label :height %>
+  <%= f.number_field :height %>
+  
+  <%= f.label :weight %>
+  <%= f.number_field :weight %>
+
+  <%= f.label :hometown %>
+  <%= f.text_field :hometown %>
+
+  <%= f.submit %>
+<% end %>
