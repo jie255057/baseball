@@ -1,5 +1,15 @@
 <% @players.each do |p| %>
-  <%= p.name %>
-  <%= link_to '編輯', edit_player_path(p) %>
-  <%= link_to '刪除', player_path(p), method: 'delete' %>
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://astro.5xruby.tw/images/posts/from-baseball-player-to-developer/cover_preview-36e5be33.jpg" alt="Sunset in the mountains">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2"><%= p.name %></div>
+    <p class="text-gray-700 text-base">
+      年齡<%= p.age %>
+    </p>
+  </div>
+  <div class="px-6 py-4">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"><%= link_to '編輯', edit_player_path(p) %></span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"><%= link_to '刪除', player_path(p), method: 'delete' %></span>
+  </div>
+</div>
 <% end %>
