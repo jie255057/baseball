@@ -1,18 +1,18 @@
 <%= form_with model: player do |f| %>
-  <%= f.label :name %>
+  <%= f.label t(:name) %>
   <%= f.text_field :name %>
 
-  <%= f.label :age %>
+  <%= f.label t(:age) %>
   <%= f.number_field :age %>
 
-  <%= f.label :height %>
+  <%= f.label t(:height) %>
   <%= f.number_field :height %>
   
-  <%= f.label :weight %>
+  <%= f.label t(:weight) %>
   <%= f.number_field :weight %>
 
-  <%= f.label :hometown %>
+  <%= f.label t(:hometown) %>
   <%= f.text_field :hometown %>
 
-  <%= f.submit %>
+  <%= f.submit t(:new_player) %>
 <% end %>
