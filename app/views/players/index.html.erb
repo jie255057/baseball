@@ -1,8 +1,9 @@
-<%= link_to '新增球員', new_player_path, class:'bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded-full' %>
+<div class="container mx-auto">
+  <%= link_to '新增球員', new_player_path, class:'bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded-full' %>
 <div class="w-full p-4 flex">
   <% @players.each do |p| %>
-    <div class="w-1/4 m-4 max-w-sm rounded overflow-hidden shadow-lg d-flex">
-      <%= image_tag p.photo, class:'w-full' if p.photo.present? %>
+    <div class="m-4 max-w-sm rounded overflow-hidden shadow-lg d-flex">
+      <%= image_tag p.photo.variant(resize_to_limit: [200, 200]) if p.photo.present? %>
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2"><%= p.name %></div>
         <p class="text-gray-700 text-base">
@@ -15,4 +16,5 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
