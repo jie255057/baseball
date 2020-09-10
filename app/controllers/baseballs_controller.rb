@@ -3,6 +3,8 @@ class BaseballsController < ApplicationController
   end
 
   def team
+    output = Player.all.to_json
+    render json: output 
   end
 
   def new
